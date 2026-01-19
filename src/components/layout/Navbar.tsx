@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Plane } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import fortuneLogo from "@/assets/fortune-xpress-logo.png";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -33,18 +34,17 @@ export function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "glass shadow-soft py-3"
-          : "bg-transparent py-5"
+          ? "bg-background/95 backdrop-blur-md shadow-soft py-3"
+          : "bg-foreground/80 backdrop-blur-sm py-4"
       }`}
     >
       <div className="container flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 group">
-          <div className={`p-2 rounded-full transition-colors ${scrolled ? 'bg-primary' : 'bg-accent-foreground/20 backdrop-blur-sm'}`}>
-            <Plane className={`w-5 h-5 transition-colors ${scrolled ? 'text-primary-foreground' : 'text-accent-foreground'}`} />
-          </div>
-          <span className={`text-xl font-display font-bold transition-colors ${scrolled ? 'text-foreground' : 'text-accent-foreground'}`}>
-            Wanderlust
-          </span>
+        <Link to="/" className="flex items-center">
+          <img 
+            src={fortuneLogo} 
+            alt="Fortune Xpress" 
+            className={`transition-all duration-300 ${scrolled ? 'h-10' : 'h-12'}`}
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -57,16 +57,20 @@ export function Navbar() {
                 location.pathname === link.path
                   ? scrolled
                     ? "bg-primary/10 text-primary"
-                    : "bg-accent-foreground/20 text-accent-foreground"
+                    : "bg-white/20 text-white"
                   : scrolled
                   ? "text-foreground hover:bg-muted"
-                  : "text-accent-foreground/90 hover:bg-accent-foreground/10"
+                  : "text-white/90 hover:bg-white/10"
               }`}
             >
               {link.name}
             </Link>
           ))}
-          <Button variant={scrolled ? "accent" : "hero"} size="sm" className="ml-3">
+          <Button 
+            variant="accent" 
+            size="sm" 
+            className="ml-3 bg-gradient-to-r from-coral to-sunset text-white font-semibold shadow-md hover:shadow-lg"
+          >
             Book Now
           </Button>
         </nav>
@@ -78,9 +82,9 @@ export function Navbar() {
           aria-label="Toggle menu"
         >
           {isOpen ? (
-            <X className={`w-6 h-6 ${scrolled ? 'text-foreground' : 'text-accent-foreground'}`} />
+            <X className={`w-6 h-6 ${scrolled ? 'text-foreground' : 'text-white'}`} />
           ) : (
-            <Menu className={`w-6 h-6 ${scrolled ? 'text-foreground' : 'text-accent-foreground'}`} />
+            <Menu className={`w-6 h-6 ${scrolled ? 'text-foreground' : 'text-white'}`} />
           )}
         </button>
       </div>
