@@ -62,10 +62,6 @@ export function Hero() {
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
-            <Button variant="hero-outline" size="xl">
-              <Play className="w-5 h-5" />
-              Watch Video
-            </Button>
           </motion.div>
 
           {/* Stats */}
@@ -81,22 +77,6 @@ export function Hero() {
           </motion.div>
         </div>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-      >
-        <div className="w-6 h-10 border-2 border-accent-foreground/50 rounded-full flex justify-center">
-          <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-1.5 h-1.5 bg-accent-foreground rounded-full mt-2"
-          />
-        </div>
-      </motion.div>
     </section>
   );
 }
