@@ -1,18 +1,23 @@
-# Welcome to your Lovable project
+# 🌍 Fortune Xpress — Tours & Travel Website
 
-## Project info
+Welcome to **Fortune Xpress**, a responsive frontend travel website built with HTML, CSS, and JavaScript (TypeScript + React). This project showcases over 500 destinations, 50K+ happy travelers, and 15+ years of travel expertise.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🚀 Live Preview
+[Click here to explore the site](https://your-deployment-link.com)
 
-## How can I edit this code?
+## 🧰 Tech Stack
+- HTML5, CSS3, JavaScript (TypeScript)
+- React + Vite
+- Responsive design with media queries
+- Git & GitHub for version control
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
+## 📦 Features
+- Hero banner with travel tagline
+- Destination cards with filters
+- Tour packages with modal popups
+- Contact form with simulated submission
+- About page with team bios and company story
+- Social sharing metadata (Open Graph + Twitter Cards)
 
 **Use your preferred IDE**
 
@@ -49,22 +54,26 @@ npm run dev
 - Select the "Codespaces" tab.
 - Click on "New codespace" to launch a new Codespace environment.
 - Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
+  
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+You can deploy this project using **Netlify**, **Vercel**, or any static hosting service.
 
-## Can I connect a custom domain to my Lovable project?
+### 🚀 Deploy with Netlify
+1. Go to [Netlify](https://www.netlify.com/)
+2. Click **"Add new site" → "Import from Git"**
+3. Connect your GitHub account and select the `Tours-and-Travel` repository
+4. Set build command (if needed): `npm run build`
+5. Set publish directory: `dist` or `build`
+6. Click **Deploy Site**
+
+### 🌐 Connect a Custom Domain
+Once deployed:
+- Go to your site settings in Netlify
+- Click **"Domain Management" → "Add custom domain"**
+- Enter your domain name (e.g., `www.fortunexpress.in`)
+- Update your DNS settings with your domain provider
+
 
 Yes, you can!
 
